@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_see_more"
+    android:layout_height="120dp"
+    android:layout_margin="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:background="#222"
+        android:id="@+id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="110dp"
+        android:layout_height="match_parent"/>
+    <TextView
+
+        app:layout_wrapBehaviorInParent="included"
+        android:background="#222"
+        android:layout_marginStart="16dp"
+        android:id="@+id/title"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="some title kjhk klh kljh l kjh l iuy uylhlkj hlkj lkj lkj h"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/image"
+        android:textSize="18sp"
+        android:maxLines="2"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:background="#222"
+        android:id="@+id/year"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(2020)"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        android:textColor="#aaa"/>
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/rating_star"
+        app:layout_constraintStart_toStartOf="@id/rating_star"
+        app:layout_constraintBottom_toTopOf="@id/rating_star"
+        android:text="3.7"
+        android:background="#222"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/rating_star"
+        android:layout_margin="16dp"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:background="#222"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:numStars="5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
